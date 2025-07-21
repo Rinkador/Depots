@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Méthodologie et Dépannage</title>
+</head>
+<body>
+    <legend>Méthodologie et Dépannage</legend>
+    <ul>
+        <p><strong>Mes cours</strong></p>
+        <li><a href="activite_3.pdf">Act 3</a></li>
+        <li><a href="methodologie_de_depannage.pdf">Méthodologie de dépannage</a></li>
+        <li><a href="tracabilite_des_informations_recueillis.pdf">Traçabilité des informations recueillis</a></li>
+        <li><a href="Pannes/pannes.html">Pannes</a></li>
+        <br/>
+        <p><strong>Cours Formateur</strong></p>
+        <li><a href="cours_methodologie_de_depannage.7z" download>Télécharger le cours apprenant: Méthodologie de dépannage</a></li>
+    </ul>
+    <h2>Notes pour réviser</h2>
+    <textarea id="Notes_methodologie_depannage" rows="8" cols="50"></textarea>
+    <script>
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_methodologie_depannage').value = localStorage.getItem('Notes_methodologie_depannage') || '';
+
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_methodologie_depannage').addEventListener('input', function() {
+        localStorage.setItem('Notes_methodologie_depannage', this.value);
+    });
+    </script>
+    <br/>
+    <a href="../../menu.html">Retour au menu principal</a>
+    <br/><br/>
+    <button onclick="history.back()">Retour</button>
+</body>
+</html>

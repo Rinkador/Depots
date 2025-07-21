@@ -1,0 +1,201 @@
+/* Style général */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f8fa;
+    margin: 0;
+    padding: 30px;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 0vh; /* Hauteur minimum = hauteur de la fenêtre */
+    text-align: center;
+}
+
+/*Texte principal */
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    display: block;
+    border: 2px solid #1565c0;      /* Bordure bleue assortie aux liens */
+    border-radius: 8px;             /* Coins arrondis */
+    padding: 10px 18px;             /* Espacement intérieur */
+    background-color: #e3ecf7;      /* Fond bleu très clair */
+    box-shadow: 0 2px 8px rgba(21, 101, 192, 0.07); /* Légère ombre */
+    text-align: center; /* Centrer le texte */
+}
+
+/* Liste de liens */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    color: #1565c0;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Bouton retour */
+button {
+    background-color: #1565c0;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #0d47a1;
+}
+
+/* Blocs de texte verticaux avec image */
+.blocs-texte-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 30px 0;
+    align-items: start;
+    justify-items: center;
+}
+
+.bloc-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    background: #e3ecf7;
+    border: 2px solid #1565c0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(21, 101, 192, 0.07);
+    padding: 12px;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+}
+
+.bloc-horizontal img {
+    margin-top: 16px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 16px;
+    border: 2px solid #1565c0;
+    background: #fff;
+}
+
+.bloc-texte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #2c3e50;
+    font-size: 1em;
+    text-align: left;
+    word-break: break-word;
+}
+
+.bloc1 {
+    width: 100%;
+}
+.bloc2 {
+    width: 100%;
+}
+.bloc3 {
+    width: 100%;
+}
+.bloc4 {
+    width: 100%;
+}
+.bloc5 {
+    width: 100%;
+}
+.bloc6 {
+    width: 100%;
+}
+
+.img-bloc1 {
+    border: 8px solid transparent;
+    border-image: url('chemin/vers/ton_bordereau1.png') 30 stretch;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.img-bloc2 {
+    border: 8px solid transparent;
+    border-image: url('chemin/vers/ton_bordereau2.png') 30 stretch;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.img-bloc3 {
+    border: 8px solid transparent;
+    border-image: url('chemin/vers/ton_bordereau1.png') 30 stretch;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.img-bloc4 {
+    border: 8px solid transparent;
+    border-image: url('chemin/vers/ton_bordereau2.png') 30 stretch;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.img-bloc5 {
+    border: 8px solid transparent;
+    border-image: url('chemin/vers/ton_bordereau1.png') 30 stretch;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.img-bloc6 {
+    border: 8px solid transparent;
+    border-image: url('chemin/vers/ton_bordereau2.png') 30 stretch;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    legend {
+        font-size: 1.1em;
+    }
+    button {
+        width: 100%;
+    }
+}

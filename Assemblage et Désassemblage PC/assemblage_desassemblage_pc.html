@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Assemblage et Désassemblage PC</title>
+</head>
+<body>
+    <legend>Assemblage et Désassemblage PC</legend>
+    <ul>
+        <p><strong>Mes cours</strong></p>
+        <li><a href="carte_mere.pdf">Carte mère</a></li>
+        <li><a href="decouverte_comprehension_des_differents_types_de_materiel_informatique.pdf">Découverte et compréhension des différents <br /> types de matériel informatique</a></li>
+        <br/>
+        <p><strong>Cours Formateur</strong></p>
+        <li><a href="cours_assemblage_desassemblage.7z" download>Télécharger le cours apprenant: Assemblage et Désassemblage d'un pc</a></li>
+        <li><a href="dossier_assemblage_pc_sept_2022.7z" download>Télécharger le dossier sur l'assemblage du pc (sept 2022)</a></li>
+    </ul>
+    <h2>Notes pour réviser</h2>
+    <textarea id="Notes_assemblage_desassemblage_pc" rows="8" cols="50"></textarea>
+    <script>
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_assemblage_desassemblage_pc').value = localStorage.getItem('Notes_assemblage_desassemblage_pc') || '';
+
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_assemblage_desassemblage_pc').addEventListener('input', function() {
+        localStorage.setItem('Notes_assemblage_desassemblage_pc', this.value);
+    });
+    </script>
+    <br/>
+    <a href="../../menu.html">Retour au menu principal</a>
+    <br/>
+    <button onclick="history.back()">Retour</button>
+</body>
+</html>

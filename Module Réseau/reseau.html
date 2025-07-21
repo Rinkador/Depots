@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Réseaux</title>
+</head>
+<body>
+    <legend>Réseaux</legend>
+    <ul>
+        <p><strong>Mes cours</strong></p>
+        <li><a href="Base de connaissance sur le réseau.pdf">Base de connaissance</a></li>
+        <li><a href="cours théorique.pdf">Cours théorique</a></li>
+        <li><a href="IP et Masque de sous réseau.pdf">IP et Masque de sous réseau.pdf</a></li>
+        <li><a href="Modèle OSI et TCPIP.pdf">Modèle OSI et TCPIP.pdf</a></li>
+        <li><a href="DNS et DHCP.pdf">DNS et DHCP.pdf</a></li>
+        <br/>
+        <p><strong>Cours Formateur</strong></p>
+        <li><a href="cours_differents_reseaux_informatique.7z" download>Télécharger le cours apprenant: Différents réseaux informatiques</a></li>
+    </ul>
+    <h2>Notes pour réviser</h2>
+    <textarea id="Notes_reseau" rows="8" cols="50"></textarea>
+    <script>
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_reseau').value = localStorage.getItem('Notes_reseau') || '';
+
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_reseau').addEventListener('input', function() {
+        localStorage.setItem('Notes_reseau', this.value);
+    });
+    </script>
+    <br/>
+    <a href="../../menu.html">Retour au menu principal</a>
+    <br/>
+    <button onclick="history.back()">Retour</button>
+</body>
+</html>

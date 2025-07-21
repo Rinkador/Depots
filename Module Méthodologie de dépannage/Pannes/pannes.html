@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Pannes informatiques</title>
+</head>
+<body>
+    <legend>Pannes informatiques</legend>
+    <ul>
+        <li><a href="acces_perdu_aux_donnees.pdf">Accès perdu aux données</a></li>
+        <li><a href="cable_mal_branche__alim_ne_fonctionne_pas.pdf">Câble mal branché / Alim ne fonctionne pas</a></li>
+        <li><a href="cas_webcam_indispo_malus_espagnol.pdf">Cas webcam indispo</a></li>
+        <li><a href="chauffe.pdf">Chauffe</a></li>
+        <li><a href="clavier_souris_fonctionne_pas.pdf">Clavier et souris ne fonctionne pas</a></li>
+        <li><a href="ecran_bleu_avec_message_d_erreur.pdf">Ecran bleu avec message d'erreur</a></li>
+        <li><a href="ecran_noir_et_manque_le_bruit_du_démarrage.pdf">Ecran noir et manque le bruit d'alimentation</a></li>
+        <li><a href="erreur_maj_windows.pdf">Erreur maj Windows</a></li>
+        <li><a href="message_d_erreur_recurrent.pdf">Message d'erreur récurrent</a></li>
+        <li><a href="ne_demarre_pas.pdf">Ne démarre pas</a></li>
+        <li><a href="ne_tient_plus_la_charge.pdf">Ne tient plus la charge</a></li>
+        <li><a href="ordi_lent.pdf">Ordinateur lent</a></li>
+        <li><a href="pannes_informatiques_concretes.pdf">Pannes informatique concrète</a></li>
+        <li><a href="pc_portable_probleme_d_alim.pdf">Problème d'alimentation du pc portable</a></li>
+        <li><a href="probleme_carte_mere.pdf">Problème de carte mère</a></li>
+        <li><a href="probleme_connexion_internet.pdf">Problème de connexion internet</a></li>
+        <li><a href="probleme_d_alimentation_du_pc.pdf">Problème d'alimentation du PC</a></li>
+        <li><a href="probleme_de_son.pdf">Problème de son</a></li>
+        <li><a href="probleme_ecran_lorsque_sa_travaille_sur_des_projets_volumineux.pdf">Problème d'écran lorsque sa travaille sur des projets volumineux</a></li>
+    </ul>
+    <h2>Notes pour réviser</h2>
+    <textarea id="Notes_pannes" rows="8" cols="50"></textarea>
+    <script>
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_pannes').value = localStorage.getItem('Notes_pannes') || '';
+
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_pannes').addEventListener('input', function() {
+        localStorage.setItem('Notes_pannes', this.value);
+    });
+    </script>
+    <br/>
+    <a href="../../menu.html">Retour au menu principal</a>
+    <br/><br/>
+    <button onclick="history.back()">Retour</button>
+</body>
+</html>

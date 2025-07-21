@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Sécurisation de l'équipement informatique</title>
+</head>
+<body>
+    <legend>Sécurisation de l'équipement informatique</legend>
+    <ul>
+        <p><strong>Mes cours</strong></p>
+        <li><a href="anssi-fondamentaux-sauvegarde_systemes_dinformation_v1-0.pdf">ANSSI Fondamentaux</a></li>
+        <li><a href="installation_et_securisation_des_applications.pdf">Installation et sécurisation des applications</a></li>
+        <li><a href="module_installation_et_securisation_des_equipements.pdf">Installation et securisation des équipements informatiques</a></li>
+        <li><a href="partitionnement_securise_et_chiffrement.pdf">Partitionnement sécurisé et chiffrement</a></li>
+        <li><a href="politique_de_securite_et_cryptographie.pdf">Politique de sécurité et cryptographie</a></li>
+        <li><a href="politique_ou_strategie_de_sauvegarde.pdf">Politique ou stratégie de sauvegarde</a></li>
+        <li><a href="programmation_tache_avec_scenario_et_chocolatey.pdf">Scénario automatique et Chocolatey</a></li>
+        <li><a href="reponse_a_un_incident_de_securite_-_ransomware.pdf">Réponse à un incident de sécurité</a></li>
+        <li><a href="rufus_et_windows.pdf">Rufus et Windows</a></li>
+        <li><a href="techniques_et_outils_de_securisation_des_postes.pdf">Techniques et outils de sécurisation des postes</a></li>
+        <li><a href="winget_-_mise_a_jour.pdf">Mise à jour avec Winget</a></li>
+        <br/>
+        <p><strong>Cours Formateur</strong></p>
+        <li><a href="cours_securisation_des_equipements.7z" download>Télécharger le cours apprenant : Sécuristation des équipements</a></li>
+    </ul>
+    <h2>Notes pour réviser</h2>
+    <textarea id="Notes_securisation_equipements_informatiques" rows="8" cols="50"></textarea>
+    <script>
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_securisation_equipements_informatiques').value = localStorage.getItem('Notes_securisation_equipements_informatiques') || '';
+
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_securisation_equipements_informatiques').addEventListener('input', function() {
+        localStorage.setItem('Notes_securisation_equipements_informatiques', this.value);
+    });
+    </script>
+    <a href="../../menu.html">Retour au menu principal</a>
+    <br/><br/>
+    <button onclick="history.back()">Retour</button>
+</body>
+</html>

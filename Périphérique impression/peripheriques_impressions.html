@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Périphériques et Impressions</title>
+</head>
+<body>
+    <legend>Périphériques et Impressions</legend>
+    <ul>
+        <p><strong>Mes cours</strong></p>
+        <li><a href="act1_question_de_cours.pdf">Activité 1 - Questions de cours</a></li>
+        <li><a href="act2_cas_pratiques.pdf">Activité 2 - Cas pratiques</a></li>
+        <li><a href="act3_imprimante_en_reseau.pdf">Activité 3 - Imprimante en réseau</a></li>
+        <br/>
+        <p><strong>Cours Formateur</strong></p>
+        <li><a href="cours_les_peripheriques_d_impressions.7z" download>Télécharger le cours apprenant: Périphériques d'impressions</a></li>
+    </ul>
+    <h2>Notes pour réviser</h2>
+    <textarea id="Notes_peripheriques_impressions" rows="8" cols="50"></textarea>
+    <script>
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_peripheriques_impressions').value = localStorage.getItem('Notes_peripheriques_impressions') || '';
+
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_peripheriques_impressions').addEventListener('input', function() {
+        localStorage.setItem('Notes_peripheriques_impressions', this.value);
+    });
+    </script>
+    <br/>
+    <a href="../../menu.html">Retour au menu principal</a>
+    <br/><br/>
+    <button onclick="history.back()">Retour</button>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Parcs Informatiques</title>
+</head>
+<body>
+    <legend>Parcs Informatiques</legend>
+    <ul>
+        <p><strong>Mes cours</strong></p>
+        <li><a href="gestion_parc_informatique.pdf">Présentation et base de connaissance</a></li>
+        <br/>
+        <p><strong>Cours Formateur</strong></p>
+        <li><a href="glpi.7z" download>Télécharger le cours apprenant: GLPI</a></li>
+        <li><a href="windows_server_et_active_directory.7z" download>Télécharger le dossier sur le cours: Windows Server et Active Directory</a></li>
+    </ul>
+    <h2>Notes pour réviser</h2>
+    <textarea id="Notes_parcs_infos" rows="8" cols="50"></textarea>
+    <script>
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_parcs_infos').value = localStorage.getItem('Notes_parcs_infos') || '';
+
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_parcs_infos').addEventListener('input', function() {
+        localStorage.setItem('Notes_parcs_infos', this.value);
+    });
+    </script>
+    <br/>
+    <a href="../../menu.html">Retour au menu principal</a>
+    <br/>
+    <button onclick="history.back()">Retour</button>
+</body>
+</html>

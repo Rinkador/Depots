@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Sensibilisation aux risques électriques</title>
+</head>
+<body>
+    <legend>Sensibilisation aux risques électriques</legend>
+    <ul>
+        <li><a href="AEMC-Erreurs-et-corrections-CEM.pdf">Erreur et Corrections du CEM</a></li>
+        <li><a href="CEM.pdf">CEM</a></li>
+        <li><a href="Charte_ESD_et_CEM.pdf">Charte ESD et CEM</a></li>
+    </ul>
+    <h2>Notes pour réviser</h2>
+    <textarea id="Notes_sensibilisation_risques_electriques" rows="8" cols="50"></textarea>
+    <script>
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_sensibilisation_risques_electriques').value = localStorage.getItem('Notes_sensibilisation_risques_electriques') || '';
+
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_sensibilisation_risques_electriques').addEventListener('input', function() {
+        localStorage.setItem('Notes_sensibilisation_risques_electriques', this.value);
+    });
+    </script>
+    <a href="../../menu.html">Retour au menu principal</a>
+    <br/><br/>
+    <button onclick="history.back()">Retour</button>
+</body>
+</html>
