@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Diversity Green</title>
+</head>
+<body>
+    <legend>Diversity Green</legend>
+    <ul>
+        <p><strong>Mes cours</strong></p>
+        <li><a href="Diversity Green.pdf">Diversity Green (note slide)</a></li>
+        <li><a href="Impact environnemental de l'IA et du numérique.pdf">Impact environnemental de l'IA et du numérique</a></li>
+        <li><a href="Impact environnemental de l'IA et du numérique.pptx">Impact environnemental de l'IA et du numérique (Slide)</a></li>
+    </ul>
+    <h2>Notes pour réviser</h2>
+    <textarea id="Notes_assemblage_desassemblage_pc" rows="8" cols="50"></textarea>
+    <script>
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_assemblage_desassemblage_pc').value = localStorage.getItem('Notes_assemblage_desassemblage_pc') || '';
+
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_assemblage_desassemblage_pc').addEventListener('input', function() {
+        localStorage.setItem('Notes_assemblage_desassemblage_pc', this.value);
+    });
+    </script>
+    <br/>
+    <a href="../../menu.html">Retour au menu principal</a>
+    <br/>
+    <button onclick="history.back()">Retour</button>
+</body>
+</html>
