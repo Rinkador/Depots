@@ -9,15 +9,15 @@
 <body>
     <legend>Parcs Informatiques</legend>
     <ul>
-        <p><strong>Mes cours</strong></p>
+        <p><strong>Mes cours sur PDF</strong></p>
         <li><a href="gestion_parc_informatique.pdf">Présentation et base de connaissance</a></li>
         <br/>
         <p><strong>Cours sur docx</strong></p>
-        <li><a href="Gestion de parcs informatique.docx">Gestion de parc (docx)</a></li>
+        <li><a href="Gestion de parcs informatique.docx" target="_blank">Gestion de parc</a></li>
         <br/>
         <p><strong>Cours Formateur</strong></p>
-        <li><a href="glpi.7z" download>Télécharger le cours apprenant: GLPI</a></li>
-        <li><a href="windows_server_et_active_directory.7z" download>Télécharger le dossier sur le cours: Windows Server et Active Directory</a></li>
+        <li><a href="glpi.7z" target="_blank" download>Télécharger le cours apprenant: GLPI</a></li>
+        <li><a href="windows_server_et_active_directory.7z" target="_blank" download>Télécharger le dossier sur le cours: Windows Server et Active Directory</a></li>
     </ul>
     <h2>Notes pour réviser</h2>
     <textarea id="Notes_parcs_infos" rows="8" cols="50"></textarea>
@@ -30,52 +30,6 @@
         localStorage.setItem('Notes_parcs_infos', this.value);
     });
     </script>
-    <br/>
-    <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
-    <script src="https://unpkg.com/docx@8.5.0/build/index.js"></script>
-    <input type="file" id="upload-docx" accept=".docx"/>
-    <h3>Contenu du fichier Word :</h3>
-    <textarea id="docx-editor" rows="10" cols="60"></textarea>
-    <br/>
-    <button id="save-docx">Télécharger le fichier modifié (.docx)</button>
-    <div id="docx-content"></div>
-    <script>
-    // Ouvrir le .docx et afficher le texte dans le textarea
-    document.getElementById('upload-docx').addEventListener('change', function(event) {
-        var reader = new FileReader();
-        reader.onload = function(event) {
-            mammoth.convertToHtml({arrayBuffer: event.target.result})
-                .then(function(result) {
-                    // Extraire le texte brut
-                    var tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = result.value;
-                    document.getElementById('docx-editor').value = tempDiv.innerText;
-                });
-        };
-        reader.readAsArrayBuffer(this.files[0]);
-    });
-
-    // Sauvegarder le texte édité dans un nouveau .docx
-    document.getElementById('save-docx').addEventListener('click', function() {
-        const { Document, Packer, Paragraph } = window.docx;
-        const text = document.getElementById('docx-editor').value;
-        const doc = new Document({
-            sections: [{
-                properties: {},
-                children: [new Paragraph(text)]
-            }]
-        });
-        Packer.toBlob(doc).then(blob => {
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = "modification.docx";
-            a.click();
-            window.URL.revokeObjectURL(url);
-        });
-    });
-    </script>
-    <br/>
     <a href="../../menu.html">Retour au menu principal</a>
     <br/>
     <button onclick="history.back()">Retour</button>
