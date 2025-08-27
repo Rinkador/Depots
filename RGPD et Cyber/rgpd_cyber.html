@@ -7,105 +7,28 @@
     <title>RGPD et Cyber</title>
 </head>
 <body>
-    <legend>RGPD et Cyber</legend>
-    <div class="blocs-texte-images">
-        <div class="bloc-horizontal bloc1">
-            <img src="" alt="Bloc Cas concret" class="img-bloc1" />
-            <div class="bloc-texte">
-                <h3>Protection des données personnelles – <a href="cas_concret.pdf">Cas concret</a></h3>
-                <p> 
-                    Dans une PME, un collègue demande le transfert d’une base de données clients contenant des noms, adresses mail et numéros 
-                        de téléphone. Cette situation soulève plusieurs enjeux liés à la protection des données personnelles selon le RGPD. 
-                </p>
-            </div>
-        </div>
-        <div class="bloc-horizontal bloc2">
-            <img src="" alt="Bloc 2" class="img-bloc2" />
-            <div class="bloc-texte">
-                <h3><a href="cybersecurite.pdf">Cyber Sécurité</a></h3>
-                <p>
-                    Vous travaillez au sein d’une entreprise en tant que technicien d'assistance en informatique. Dans ce cadre, vous avez 
-                        pour mission de sensibiliser vos collègues aux risques liés à la cybersécurité et de leur transmettre les bonnes pratiques 
-                        à adopter au quotidien. Face à la multiplication des menaces (hameçonnage, ransomwares, fuites de données, etc.), votre 
-                        rôle est essentiel pour limiter les vulnérabilités humaines, souvent à l’origine des incidents de sécurité.
-                </p>
-            </div>
-        </div>
-        <div class="bloc-horizontal bloc3">
-            <img src="" alt="Bloc 3" class="img-bloc3" />
-            <div class="bloc-texte">
-                <h3><a href="cybersecurite_avancee.pdf">Cyber avancée</a></h3>
-                <p>
-                    Dans le cadre de vos fonctions en tant que professionnel de l’assistance informatique au sein d’une entreprise, vous êtes 
-                        chargé de sensibiliser vos collègues aux enjeux de cybersécurité. Cette mission s’inscrit dans une démarche de prévention 
-                        face aux menaces croissantes telles que les virus, ransomwares, fuites de données ou attaques par phishing.
-                    <br/><br/>
-                        Vous devez informer le personnel sur les bonnes pratiques à adopter, les comportements à risque à éviter et les réflexes 
-                            à développer pour renforcer la sécurité numérique au quotidien. Cette sensibilisation s’appuie sur des recherches 
-                            personnelles et des exemples concrets issus du monde professionnel.
-                    <br/><br/>
-                        Vous serez amené à restituer vos connaissances à l’écrit sous la forme d’un mini-guide ou à l’oral à l’occasion d’un 
-                            exposé de fin de module.
-                </p>
-            </div>
-        </div>
-        <div class="bloc-horizontal bloc4">
-            <img src="" alt="Bloc 4" class="img-bloc4" />
-            <div class="bloc-texte">
-                <h3><a href="mini_guide.pdf">Mini-guide</a> de sensibilisation à la cybersécurité en entreprise</h3>
-                <p>
-                    En tant que professionnel de l’assistance informatique au sein d’une 
-                        entreprise, tu es chargé de sensibiliser l’ensemble des 
-                        collaborateurs aux enjeux de cybersécurité. Dans un environnement 
-                        où les risques numériques sont de plus en plus présents 
-                        (phishing, ransomware, perte de données, usurpation d’identité...), 
-                        il est essentiel de développer une culture de la sécurité partagée.
-                    <br/><br/>
-                    Ce mini-guide a pour objectif de regrouper les bonnes pratiques à adopter 
-                        au quotidien pour protéger les systèmes d’information, les données 
-                        professionnelles et la réputation de l’entreprise. Il constitue un 
-                        support de prévention et d'information destiné à tous les utilisateurs, 
-                        quel que soit leur niveau technique.
-                </p>
-            </div>
-        </div>
-        <div class="bloc-horizontal bloc5">
-            <img src="" alt="Bloc 5" class="img-bloc5" />
-            <div class="bloc-texte"><h3><a href="Protection des données.pdf">Protection des données</a></h3></div>
-        </div>
-        <div class="bloc-horizontal bloc6">
-            <img src="" alt="Bloc 6" class="img-bloc6" />
-            <div class="bloc-texte"><h3><a href="rgpd_protection_des_donnees.pdf">RGPD Protection des données</a></h3></div>
-        </div>
-    </div>
     <ul>
+        <p><strong>Mes cours sur PDF</strong></p>
+        <li><a href="cas_concret.pdf" target="_blank">Cas concret</a></li>
+        <li><a href="cybersecurite.pdf" target="_blank">Cybersecurité</a></li>
+        <li><a href="cybersecurite_avancee.pdf" target="_blank">Cybersecurité avancée</a></li>
+        <li><a href="mini_guide.pdf" target="_blank">Mini-guide</a></li>
+        <li><a href="Protection des données.pdf" target="_blank">Protection des données</a></li>
+        <li><a href="rgpd_protection_des_donnees.pdf" target="_blank">RGPD protection des données</a></li>
         <br/>
         <p><strong>Cours Formateur</strong></p>
-        <li><a href="cours_cybersecurite_rgpd.7z" download>Télécharger le cours apprenant: Cybersécurité RGPD</a></li>
+        <li><a href="cours_cybersecurite_rgpd.7z" download>Télécharger le cours sur : Cybersecurité</a></li>
     </ul>
     <h2>Notes pour réviser</h2>
-    <textarea id="Notes_rgpd_cyber" rows="8" cols="50"></textarea>
+    <textarea id="Notes_cybersecurite" rows="8" cols="50"></textarea>
     <script>
-        // Sélectionne la zone de texte
-        const textarea = document.getElementById('Notes_rgpd_cyber');
+    // Charger les notes sauvegardées
+    document.getElementById('Notes_cybersecurite').value = localStorage.getItem('Notes_cybersecurite') || '';
 
-        // Charge la note sauvegardée
-        textarea.value = localStorage.getItem('Notes_rgpd_cyber') || '';
-
-        // Fonction d’auto-ajustement de la hauteur
-        function autoResize() {
-            textarea.style.height = 'auto';
-            textarea.style.height = textarea.scrollHeight + 'px';
-        }
-
-        // Sauvegarde et ajuste à chaque modification
-        textarea.addEventListener('input', function() {
-            localStorage.setItem('Notes_rgpd_cyber', this.value);
-            autoResize();
-        });
-
-        // Ajuste à l’ouverture si déjà du texte
-        autoResize();
+    // Sauvegarder à chaque modification
+    document.getElementById('Notes_cybersecurite').addEventListener('input', function() {
+        localStorage.setItem('Notes_cybersecurite', this.value);
+    });
     </script>
     <br/>
     <button onclick="history.back()">Retour</button>
