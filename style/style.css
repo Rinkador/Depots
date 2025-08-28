@@ -3,13 +3,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f6f8fa;
     margin: 0;
-    padding: 30px;
+    padding: 5px;
     color: #222;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 0vh; /* Hauteur minimum = hauteur de la fenêtre */
+    min-height: 80vh; /* Hauteur minimum = hauteur de la fenêtre */
     text-align: center;
 }
 
@@ -198,4 +198,87 @@ button:hover {
     button {
         width: 100%;
     }
+}
+
+.horizontal-menu {
+    display: flex;
+    background: #222;
+    color: #fff;
+    padding: 0 0 0 20px;
+    height: 50px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.menu-item {
+    position: relative;
+    padding: 0 30px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item:hover {
+    background: #333;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background: #333;
+    min-width: 180px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    padding: 10px 0;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.submenu-item {
+    position: relative;
+}
+
+.submenu-item > a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    transition: background 0.2s;
+}
+
+.submenu-item > a:hover {
+    background: #444;
+}
+
+.submenu-right {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #444;
+    min-width: 200px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    padding: 10px 0;
+}
+
+.submenu-item:hover .submenu-right {
+    display: block;
+}
+
+.submenu-right a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    transition: background 0.2s;
+}
+
+.submenu-right a:hover {
+    background: #555;
 }
