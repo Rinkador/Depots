@@ -8,12 +8,11 @@
 </head>
 <body>
     <legend>Voici mon dépot de documents suivant la formation en TAI</legend>
-    <div class="background-image"></div>
     <nav class="horizontal-menu">
         <div class="menu-item">
             Référentiel TAI
             <div class="submenu">
-                <a href="Référentiel TAI/referentiel.html" onclick="showContent('referentiel')">Calendrier</a>
+                <a href="Référentiel TAI/referentiel.html">Calendrier</a>
             </div>
         </div>
         <div class="menu-item">
@@ -21,62 +20,62 @@
             <div class="submenu">
                 <div class="submenu-item">
                     <a href="#">Chapitre 1</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="Sensibilisation aux risques électriques/sensibilisation_aux_risques_electriques.html">Sensibilisation aux risques électriques</a>
                     </div>
                 </div>
                 <div class="submenu-item">
                     <a href="#">Chapitre 2</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="Assemblage et Désassemblage PC/assemblage_desassemblage_pc.html">Assemblage et Désassemblage PC</a>
                     </div>
                 </div>
                 <div class="submenu-item">
                     <a href="#">Chapitre 3</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="Module Méthodologie de dépannage/module_methodologie_depannage.html">Méthodologie de dépannage</a>
                         <a href="Module Méthodologie de dépannage/Pannes/pannes.html">Cas de Pannes</a>
                     </div>
                 </div>
                 <div class="submenu-item">
                     <a href="#">Chapitre 4</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="RGPD et Cyber/rgpd_cyber.html">RGPD et Cyber</a>
                     </div>
                 </div>
                 <div class="submenu-item">
                     <a href="#">Chapitre 5</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="Sécurisation de l'équipement informatique/securisation_equipement_informatique.html">Sécurisation de l'équipement informatique</a>
                     </div>
                 </div>
                 <div class="submenu-item">
                     <a href="#">Chapitre 6</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="Sauvegarde et Protection des données/save_protection_des_donnees.html">Sauvegarde et protection des données</a>
                     </div>
                 </div>
                 <div class="submenu-item">
                     <a href="#">Chapitre 7</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="Périphérique impression/peripheriques_impressions.html">Périphériques et Impressions</a>
                     </div>
                 </div>
                 <div class="submenu-item">
                     <a href="#">Chapitre 8</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="Module Réseau/reseau.html">Réseau</a>
                     </div>
                 </div>
                 <div class="submenu-item">
                     <a href="#">Chapitre 9</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="Gestion de parc informatique/parc_info.html">Gestion de parc informatique</a>
                     </div>
                 </div>
                 <div class="submenu-item">
                     <a href="#">Chapitre 10</a>
-                    <div class="submenu submenu-right">
+                    <div class="submenu-right">
                         <a href="Diversity Green/diversity_green.html">Diversity Green</a>
                     </div>
                 </div>
@@ -85,85 +84,9 @@
         <div class="menu-item">
             Ressources
             <div class="submenu">
-                <a href="Ressources/ressources.html" onclick="showContent('ressources')">Ressources</a>
+                <a href="Ressources/ressources.html">Ressources</a>
             </div>
         </div>
     </nav>
-    <div class="main-content" id="main-content">
-        <p>Sélectionne un onglet dans la barre de menu pour afficher le contenu.</p>
-    </div>
-    <script>
-    function showContent(section) {
-        document.body.classList.add('content-active');
-        let html = "";
-        if (section === "referentiel") {
-            html = `<legend>Référentiel TAI</legend>
-                <ul>
-                    <li><a href="Référentiel TAI/referentiel.html" target="_blank">Référentiel TAI</a></li>
-                    <li><a href="Référentiel TAI/calendrier_tai_macon_apor_2025.pdf" target="_blank">Calendrier</a></li>
-                </ul>`;
-        } else if (section === "chapitre1") {
-            html = `<legend>Chapitre 1</legend>
-                <ul>
-                    <li><a href="Sensibilisation aux risques électriques/sensibilisation_aux_risques_electriques.html" target="_blank">Sensibilisation aux risques électriques</a></li>
-                </ul>`;
-        } else if (section === "chapitre2") {
-            html = `<legend>Chapitre 2</legend>
-                <ul>
-                    <li><a href="Assemblage et Désassemblage PC/assemblage_desassemblage_pc.html" target="_blank">Assemblage et Désassemblage PC</a></li>
-                </ul>`;
-        } else if (section === "chapitre3") {
-            html = `<legend>Chapitre 3</legend>
-                <ul>
-                    <li><a href="Module Méthodologie de dépannage/module_methodologie_depannage.html" target="_blank">Méthodologie de dépannage</a></li>
-                    <li><a href="Module Méthodologie de dépannage/Pannes/pannes.html" target="_blank">Cas de panne</a></li>
-                </ul>`;
-        } else if (section === "chapitre4") {
-            html = `<legend>Chapitre 4</legend>
-                <ul>
-                    <li><a href="RGPD et Cyber/rgpd_cyber.html" target="_blank">RGPD et Cyber</a></li>
-                </ul>`;
-        } else if (section === "chapitre5") {
-            html = `<legend>Chapitre 5</legend>
-                <ul>
-                    <li><a href="Sécurisation de l'équipement informatique/securisation_equipement_informatique.html" target="_blank">Sécurisation de l'équipement informatique</a></li>
-                </ul>`;
-        } else if (section === "chapitre6") {
-            html = `<legend>Chapitre 6</legend>
-                <ul>
-                    <li><a href="Sauvegarde et Protection des données/save_protection_des_donnees.html" target="_blank">Sauvegarde et protection des données</a></li>
-                </ul>`;
-        } else if (section === "chapitre7") {
-            html = `<legend>Chapitre 7</legend>
-                <ul>
-                    <li><a href="Périphérique impression/peripheriques_impressions.html" target="_blank">Périphériques et Impressions</a></li>
-                </ul>`;
-        } else if (section === "chapitre8") {
-            html = `<legend>Chapitre 8</legend>
-                <ul>
-                    <li><a href="Module Réseau/reseau.html" target="_blank">Réseau</a></li>
-                </ul>`;
-        } else if (section === "chapitre9") {
-            html = `<legend>Chapitre 9</legend>
-                <ul>
-                    <li><a href="Gestion de parc informatique/parc_info.html" target="_blank">Gestion de parc informatique</a></li>
-                </ul>`;
-        } else if (section === "chapitre10") {
-            html = `<legend>Chapitre 10</legend>
-                <ul>
-                    <li><a href="Diversity Green/diversity_green.html" target="_blank">Diversity Green</a></li>
-                </ul>`;
-        } else if (section === "ressources") {
-            html = `<legend>Ressources</legend>
-                <ul>
-                    <li><a href="Ressources/ressources.html" target="_blank">Ressources vidéos</a></li>
-                </ul>`;
-        } else {
-            html = `<p>Sélectionne un onglet dans la barre de menu pour afficher le contenu.</p>`;
-            document.body.classList.remove('content-active');
-        }
-        document.getElementById('main-content').innerHTML = html;
-    }
-    </script>
 </body>
 </html>
