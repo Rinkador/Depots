@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Dépots de documents</title>
 </head>
-<body>
-    <legend>Voici mon dépot de documents suivant la formation en TAI</legend>
+<body class="content-active">
+    <div class="background-image"></div>
+    <h1>Voici mon dépot de documents suivant la formation en TAI</h1>
     <nav class="horizontal-menu">
         <div class="menu-item">
             Référentiel TAI
             <div class="submenu">
-                <a href="Référentiel TAI/referentiel.html">Calendrier</a>
+                <a href="Référentiel TAI/referentiel.html">Référentiel TAI</a>
             </div>
         </div>
         <div class="menu-item">
@@ -88,5 +89,12 @@
             </div>
         </div>
     </nav>
+    <script>
+        // Quand tu affiches du contenu
+        document.body.classList.add('content-active');
+
+        // Quand tu veux que l'image soit bien visible (pas de contenu)
+        document.body.classList.remove('content-active');
+    </script>
 </body>
 </html>
