@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Dépots de documents</title>
 </head>
-<body class="content-active">
+<body>
     <div class="background-image"></div>
-    <h1>Voici mon dépot de documents suivant la formation en TAI</h1>
+    <header>
+        <h1>Voici mon dépôt de documents suivant la formation en TAI</h1>
+    </header>
     <nav class="horizontal-menu">
         <div class="menu-item">
             Référentiel TAI
@@ -89,12 +91,18 @@
             </div>
         </div>
     </nav>
+    <main id="main-content">
+        <h2>Bienvenue sur mon dépôt de documents</h2>
+        <p>Utilisez le menu ci-dessus pour naviguer à travers les différents chapitres et ressources.</p>
+    </main>
     <script>
-        // Quand tu affiches du contenu
-        document.body.classList.add('content-active');
-
-        // Quand tu veux que l'image soit bien visible (pas de contenu)
-        document.body.classList.remove('content-active');
+        function setContentActive(active) {
+            if (active) {
+                document.body.classList.add('content-active');
+            } else {
+                document.body.classList.remove('content-active');
+            }
+        }
     </script>
 </body>
 </html>
